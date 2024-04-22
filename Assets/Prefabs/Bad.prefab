@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2941031635008091266}
   - component: {fileID: 2515737055704624931}
   - component: {fileID: 6653893107233254506}
-  - component: {fileID: 1838610729532279827}
+  - component: {fileID: 8296609934151612662}
   m_Layer: 0
   m_Name: Bad
   m_TagString: Untagged
@@ -35,7 +35,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!33 &4989503378142470084
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -134,7 +134,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1838610729532279827
+--- !u!114 &8296609934151612662
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
