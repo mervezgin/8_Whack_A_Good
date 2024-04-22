@@ -10,7 +10,7 @@ public class Target : MonoBehaviour
     float maxSpeed = 16.0f;
     float maxTorque = 10.0f;
     float xRange = 4.0f;
-    float ySpawnPos = -6.0f;
+    float ySpawnPos = -2.0f;
 
 
     // Start is called before the first frame update
@@ -41,5 +41,15 @@ public class Target : MonoBehaviour
     Vector3 RandomSpawnPos()
     {
         return new Vector3(Random.Range(-xRange, xRange), ySpawnPos, 0);
+    }
+
+    void OnMouseDown()
+    {
+        Destroy(gameObject);
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        Destroy(gameObject);
     }
 }
