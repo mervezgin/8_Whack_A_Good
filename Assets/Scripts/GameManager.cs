@@ -11,27 +11,35 @@ public class GameManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI scoreText;
     [SerializeField] TextMeshProUGUI gameOverText;
     [SerializeField] Button restartGameButton;
+    [SerializeField] GameObject TitleScreen;
 
     Target targetScript;
 
     public bool isGameActive = false;
 
-    float spawnRate = 1.0f;
+    float spawnRate = 1.5f;
     int score;
 
     // Start is called before the first frame update
     void Start()
     {
-        UpdateScore(0);
-        isGameActive = true;
-        StartCoroutine(SpawnTarget());
         gameOverText.gameObject.SetActive(false);
         restartGameButton.gameObject.SetActive(false);
+        TitleScreen.gameObject.SetActive(true);
     }
 
     // Update is called once per frame
     void Update()
     {
+    }
+
+    public void StartTheGame(int difficulty)
+    {
+        UpdateScore(0);
+        spawnRate = spawnRate / difficulty;
+        isGameActive = true;
+        StartCoroutine(SpawnTarget());
+        TitleScreen.gameObject.SetActive(false);
     }
 
     IEnumerator SpawnTarget()
